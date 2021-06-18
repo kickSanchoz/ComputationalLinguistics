@@ -1,0 +1,2 @@
+rootProject.name = "CompLing_app"
+include ':app'

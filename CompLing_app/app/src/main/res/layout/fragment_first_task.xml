@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ft_mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstTaskFragments.FirstTaskFragment">
+
+    <LinearLayout
+        android:id="@+id/ft_periodLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FAD386"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ft_textChoosePeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Выберите период"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ft_textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Период"
+            android:textColorHint="#000000"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:startIconDrawable="@drawable/ic_timer"
+            app:startIconTint="#000000">
+
+            <AutoCompleteTextView
+                android:id="@+id/ft_autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/firstTask_scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ft_periodLayout">
+
+        <LinearLayout
+            android:id="@+id/firstTask_scrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/ft_newsContent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#DFDFDF"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ft_newsHead_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4E8098"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ft_newsInfo_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ft_newsTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Поезда Волгоград Москва задерживаются из-за схода с рельсов грузового состава"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ft_newsUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="https://www.volgograd.kp.ru/online/news/4328392"
+                            android:textColor="#F8A5AF"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ft_newsTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="#society #zenyandex"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ft_newsBody_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ft_newsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="none"
+                        android:maxLines="5"
+                        android:text="Днем 14 июня 2020 года на перегоне Ярыженская - Алексиково в Волгоградской области сошел с рельсов грузовой поезд. На время восстановительных работ движение на этом участке Приволжской железной дороги временно приостановлено, а все проходящие здесь поезда изменили маршруты и теперь задерживаются в пути. Как сообщили КП-Волгоград в пресс-службе ПривЖД, задерживаются пассажирские поезда дальнего следования Волгоград Москва и поезд Волгоград Москва. Составы направили в обход поврежденного участка. Кроме того, сократили маршрут пригородные поезда, соединяющие Волгоград и Урюпинск. Составы пойдут лишь до Филоново и обратно. Так, 14 июня поезд /6817 Волгоград-1 Филоново прибудет на станцию Филоново в 22:44. А 15 июня поезд /6810 Филоново Волгоград-1 отправится в областной центр в 3:35 и прибудет на станцию Волгоград-1 в 8:34 утра. В ПривЖД отмечают, что в результате схода с рельсов вагонов грузового поезда в Волгоградской области никто не пострадал, нет угрозы и для экологии. Последствия ЧП сейчас устраняют восстановительные поезда. Причину происшествия еще предстоит установить."
+                        android:textColor="#000000" />
+
+                    <LinearLayout
+                        android:id="@+id/ft_newsAttachments_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="0dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/ft_textAttachments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Вложения:"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:id="@+id/ft_newsImages_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/ft_imgUrl2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="middle"
+                                android:maxLines="1"
+                                android:text="https://s15.stc.all.kpcdn.net/share/i/12/11987833/wr-960.jpg"
+                                android:textColor="#2B6F77"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/ft_imgUrl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="middle"
+                                android:maxLines="1"
+                                android:text="https://s15.stc.all.kpcdn.net/share/i/12/11987833/wr-960.jpg"
+                                android:textColor="#2B6F77"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ft_textShowMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Показать полностью..."
+                        android:textColor="#455DD5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ft_newsFooter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#AEAEAE"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ft_newsComments_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ft_imgComments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            tools:src="@drawable/ic_comments_white" />
+
+                        <TextView
+                            android:id="@+id/ft_valueComments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="3"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ft_newsDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right|center_vertical"
+                        android:text="19.02.2021"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/ft_mainProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

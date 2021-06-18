@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/firstTaskFragment">
+
+    <fragment
+        android:id="@+id/firstTaskFragment"
+        android:name="com.example.compling_app.FirstTaskFragments.FirstTaskFragment"
+        android:label="fragment_first_task"
+        tools:layout="@layout/fragment_first_task" />
+    <fragment
+        android:id="@+id/secondTaskFragment"
+        android:name="com.example.compling_app.SecondTaskFragments.SecondTaskFragment"
+        android:label="fragment_second_task"
+        tools:layout="@layout/fragment_second_task" />
+    <fragment
+        android:id="@+id/thirdTaskFragment"
+        android:name="com.example.compling_app.ThirdTaskFragments.ThirdTaskFragment"
+        android:label="fragment_third_task"
+        tools:layout="@layout/fragment_third_task" />
+</navigation>

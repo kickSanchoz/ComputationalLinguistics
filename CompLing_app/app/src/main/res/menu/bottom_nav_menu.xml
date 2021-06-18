@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstTaskFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_language"
+        android:title="Новости" />
+    <item
+        android:id="@+id/secondTaskFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_book"
+        android:title="Синонимы"/>
+    <item
+        android:id="@+id/thirdTaskFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_emoji"
+        android:title="Тональность"/>
+</menu>
