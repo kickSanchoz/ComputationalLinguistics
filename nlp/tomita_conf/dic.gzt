@@ -1,0 +1,78 @@
+encoding "utf8";
+
+import "base.proto";
+import "articles_base.proto";
+import "kwtypes.proto"; //импортируем файл, в котором описаны используемые в словаре типы статей
+
+import "fact_types.proto";
+
+TAuxDicArticle "дата"
+{
+    key = {"tomita:first_grammar.cxx" type=CUSTOM}
+}
+
+building "build_1mw"{
+    key = {"dost_1mw" type=FILE }
+}
+
+building "build_2mw"{
+    key = {"dost_2mw" type=FILE }
+    mainword=2
+}
+
+building "build_3mw"{
+    key = {"dost_3mw" type=FILE }
+    mainword=3
+}
+
+building "build_4mw"{
+    key = {"dost_4mw" type=FILE }
+    mainword=4
+}
+
+TAuxDicArticle "build_name"{ //TAuxDicArticle
+    key = {"dost_const" type=FILE }
+}
+
+person "fullname"{
+    key = {"fio" type=FILE}
+}
+
+person "F_I"{
+    key = {"fi" type=FILE}
+}
+
+person "I_F"{
+    key = {"if" type=FILE}
+    mainword=2
+}
+
+person "post_1mw"{
+    key = {"post_1mw" type=FILE }
+}
+
+person "post_2mw"{
+    key = {"post_2mw" type=FILE }
+    mainword=2
+}
+
+person "post_3mw"{
+    key = {"post_3mw" type=FILE }
+    mainword=3
+}
+
+person "post_4mw"{
+    key = {"post_4mw" type=FILE }
+    mainword=4
+}
+
+person "gubernator_1mw"{
+    key = {"gubernator_1mw" type=FILE}
+    lemma = "губернатор"
+}
+
+person "gubernator_2mw"{
+    key = {"Андрей Бочаров"}
+    mainword=2
+    lemma="губернатор"
+}

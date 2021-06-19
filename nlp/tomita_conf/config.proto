@@ -1,0 +1,23 @@
+encoding "utf8";
+
+TTextMinerConfig {
+    Dictionary = "dic.gzt";
+    //PrettyOutput = "pretty.html";
+
+    // Input = {
+    //     File = "input.txt";
+    // }
+
+    Output = {
+        //File = "output.txt";
+        Format = xml;
+    }
+
+Articles = [
+        { Name = "дата" }
+    ]
+
+Facts = [
+        { Name = "Fact" }
+    ]
+}
